@@ -1,0 +1,30 @@
+@use "~@/styles/utils/variables" as *;
+
+.page-footer{
+&__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:80px;
+}
+
+&__text{
+    font-size: 12px;
+    color:$secondary-text-color;
+}
+&__list{
+    display: flex;
+    gap: 20px;
+
+}
+&__btn{
+    transition: color 0.5s ease;
+    background: none;
+    color:$secondary-text-color;
+    padding:5px 10px;
+    cursor: pointer;
+    &:hover, &:focus{
+     color:$accent-text-color ;
+    }
+}
+}

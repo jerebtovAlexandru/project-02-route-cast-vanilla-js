@@ -1,0 +1,514 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>RouteCast</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container page-header__container">
+        <div class="page-header__logo">
+          <img
+            src="~@/assets/images/picture-svgrepo-com.svg"
+            width="35"
+            alt="Логотип RouteCast"
+            class="page-header__logo-img"
+          />
+          <p class="page-header__logo-text">RouteCast</p>
+        </div>
+
+        <nav class="page-header__nav">
+          <ul class="page-header__menu">
+            <li class="page-header__menu-item">
+              <a href="#features" class="page-header__menu-link">Возможности</a>
+            </li>
+            <li class="page-header__menu-item">
+              <a href="#route" class="page-header__menu-link">Маршрут</a>
+            </li>
+            <li class="page-header__menu-item">
+              <a href="#weather" class="page-header__menu-link">Погода</a>
+            </li>
+            <li class="page-header__menu-item">
+              <a href="#trip-summery" class="page-header__menu-link">Сводка</a>
+            </li>
+          </ul>
+          <a href="#route" class="page-header__nav-btn">Старт</a>
+        </nav>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="section-hero">
+        <div class="container section-hero__container">
+          <h1 class="section-hero__title">
+            <span>Маршрут.</span>
+            <span class="section-hero__title-accent--red">Погода.</span>
+            <span>В дорогу.</span>
+          </h1>
+          <p class="section-hero__subtitle">
+            RouteCast строит реальные автодороги, рассчитывает метрики поездки и
+            выдаёт точный прогноз погоды с умными рекомендациями — всё в одном
+            окне.
+          </p>
+          <div class="section-hero__btn-container">
+            <a class="section-hero__button" href="#route">Построить маршрут</a>
+            <a
+              class="section-hero__button section-hero__button--transparent"
+              href="#weather"
+              >Проверить погоду</a
+            >
+          </div>
+          <ul class="section-hero__list">
+            <li class="section-hero__list-item">
+              <p class="section-hero__list-item-text">
+                <span class="section-hero__list-item-accent">1 200+</span
+                >Городов в базе.
+              </p>
+            </li>
+            <li class="section-hero__list-item">
+              <p class="section-hero__list-item-text">
+                <span class="section-hero__list-item-accent">99.2%</span
+                >Точность маршрутов.
+              </p>
+            </li>
+            <li class="section-hero__list-item">
+              <p class="section-hero__list-item-text">
+                <span class="section-hero__list-item-accent">5 дней</span
+                >Прогноз вперёд.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-features" id="features">
+        <div class="container section-features__container">
+          <p class="section-features__text">— Возможности</p>
+          <h2 class="section-features__title">Всё что нужно для поездки</h2>
+          <ul class="section-features__list">
+            <li class="section-features__item">
+              <p class="section-features__item-text">01 — МАРШРУТЫ</p>
+              <img
+                alt=""
+                src="~@/assets/images/track-svgrepo-com.svg"
+                class="section-features__item-img"
+                width="20"
+                height="20"
+              />
+              <h3 class="section-features__item-title">Реальные дороги</h3>
+              <p class="section-features__item-subtitle">
+                Система находит реальные автодороги, мгновенно строит маршрут по
+                клику на карте и чертит красную линию пути. Поддержка
+                промежуточных точек.
+              </p>
+              <div class="section-features__item-cnt">
+                <img
+                  alt=""
+                  src="~@/assets/images/lightning-svgrepo-com.svg"
+                  class="section-features__item-cnt-img"
+                  width="15"
+                  height="15"
+                />
+                <p class="section-features__item-cnt-text">1 200+ городов</p>
+              </div>
+            </li>
+
+            <li class="section-features__item">
+              <p class="section-features__item-text">02 — ПОГОДА</p>
+              <img
+                alt=""
+                src="~@/assets/images/weather-2-svgrepo-com.svg"
+                class="section-features__item-img"
+                width="20"
+                height="20"
+              />
+              <h3 class="section-features__item-title">
+                Прогноз на 5 дней вперёд
+              </h3>
+              <p class="section-features__item-subtitle">
+                Экспресс-поиск погоды в любом городе с автокомплитом.
+                Визуализация текущего дня и недельного прогноза с иконками
+                осадков.
+              </p>
+              <div class="section-features__item-cnt">
+                <img
+                  alt=""
+                  src="~@/assets/images/lightning-svgrepo-com.svg"
+                  class="section-features__item-cnt-img"
+                  width="15"
+                  height="15"
+                />
+                <p class="section-features__item-cnt-text">99.2% точность</p>
+              </div>
+            </li>
+
+            <li class="section-features__item">
+              <p class="section-features__item-text">03 — DRESSING</p>
+              <img
+                alt=""
+                src="~@/assets/images/shirt-svgrepo.svg"
+                class="section-features__item-img"
+                width="20"
+                height="20"
+              />
+              <h3 class="section-features__item-title">Умные рекомендации</h3>
+              <p class="section-features__item-subtitle">
+                Алгоритм анализирует температуру и осадки в точке прибытия и
+                генерирует конкретные советы — что надеть и что взять в дорогу.
+              </p>
+              <div class="section-features__item-cnt">
+                <img
+                  alt=""
+                  src="~@/assets/images/lightning-svgrepo-com.svg"
+                  class="section-features__item-cnt-img"
+                  width="15"
+                  height="15"
+                />
+                <p class="section-features__item-cnt-text">Smart AI анализ</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-route" id="route">
+        <div class="container section-route__container">
+          <p class="section-route__text">— Конструктор маршрутов</p>
+          <h2 class="section-route__title">Построй свой маршрут</h2>
+          <div class="section-route__blocks-cnt">
+            <div class="section-route__cnt-functional">
+              <div class="section-route__cnt-inputs">
+                <ul class="section-route__list-input">
+                  <li class="section-route__item-input">
+                    <p class="section-route__item-title-input">Откуда</p>
+                    <input
+                      id="begin"
+                      class="section-route__input"
+                      type="text"
+                      placeholder="Город отправления"
+                    />
+                  </li>
+                  <li class="section-route__item-input">
+                    <p class="section-route__item-title-input">Куда</p>
+                    <input
+                      id="end"
+                      class="section-route__input"
+                      type="text"
+                      placeholder="Город назначения"
+                    />
+                  </li>
+                </ul>
+                <button class="section-route__btn" id="startBtn">
+                  <span
+                    ><img
+                      alt=""
+                      src="~@/assets/images/lightning-svgrepo-com.svg"
+                      width="20"
+                      height="20" /></span
+                  >Построить маршрут
+                </button>
+              </div>
+
+              <ul class="section-route__list-route">
+                <li class="section-route__item-route">
+                  <p class="section-route__text-route">
+                    Расстояние<span
+                      id="distanceRoute"
+                      class="section-route__text-route--big"
+                      >0 km</span
+                    >
+                  </p>
+                </li>
+                <li class="section-route__item-route">
+                  <p class="section-route__text-route">
+                    В пути<span
+                      id="distanсeTimeRoute"
+                      class="section-route__text-route--big"
+                      >0 h</span
+                    >
+                  </p>
+                </li>
+              </ul>
+              <div class="section-route__points-cnt">
+                <p class="section-route__text-points">Промежуточные точки</p>
+                <ul></ul>
+                <button class="section-route__btn-points">+ Добавить</button>
+              </div>
+            </div>
+            <div>
+              <div id="map" class="section-route__map"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-weather" id="weather">
+        <iv class="container section-weather__container">
+          <p class="section-weather__text">— Экспресс-Погода</p>
+          <h2 class="section-weather__title">Знай погоду до выезда</h2>
+          <div class="section-weather__main-div">
+            <div class="section-weather__div-data-search">
+              <div class="section-weather__div-search">
+                <p class="section-weather__search-title">Поиск города</p>
+                <input
+                  id="searchInput"
+                  type="text"
+                  placeholder="Введите город..."
+                  class="section-weather__search-input"
+                />
+                <button
+                  id="weatherSearchButton"
+                  class="section-weather__button"
+                >
+                  Искать погоду
+                </button>
+                <button id="weatherResetButton" class="section-weather__button">
+                  Обновить запрос
+                </button>
+              </div>
+              <div class="section-weather__div-data">
+                <p class="section-weather__data-text">Сейчас</p>
+                <div class="section-weather__info">
+                  <p class="section-weather__data-reply">
+                    <span
+                      id="weatherTemp"
+                      class="section-weather__data-indication"
+                      >0</span
+                    ><span>Переменная облачность</span>
+                  </p>
+                  <img id="weatherImage" alt="" />
+                </div>
+
+                <ul class="section-weather__data-news-list">
+                  <li class="section-weather__data-item">
+                    <img
+                      alt=""
+                      src="~@/assets/images/track-svgrepo-com.svg"
+                      class="section-weather__item-img"
+                      width="20"
+                      height="20"
+                    />
+                    <p class="section-weather__data-item-text">Ощущается</p>
+                    <span id="sensationsTemp">0</span>
+                  </li>
+                  <li class="section-weather__data-item">
+                    <img
+                      alt=""
+                      src="~@/assets/images/track-svgrepo-com.svg"
+                      class="section-weather__item-img"
+                      width="20"
+                      height="20"
+                    />
+                    <p class="section-weather__data-item-text">Ветер</p>
+                    <span id="sensationsWind">0</span>
+                  </li>
+                  <li class="section-weather__data-item">
+                    <img
+                      alt=""
+                      src="~@/assets/images/track-svgrepo-com.svg"
+                      class="section-weather__item-img"
+                      width="20"
+                      height="20"
+                    />
+                    <p class="section-weather__data-item-text">Влажность</p>
+                    <span id="sensationsHumidity">0</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="section-weather__div-prediction">
+              <h3 class="section-weather__prediction-title">
+                Прогноз на 5 дней
+              </h3>
+              <div class="section-weather__prediction-container">
+                <ul
+                  id="forecastWeatherDaysContainerRef"
+                  class="section-weather__prediction-list"
+                >
+                  <li class="section-weather__prediction-item">
+                    <img
+                      class="section-weather__prediction-img"
+                      src="../assets/images/weather-2-svgrepo-com.svg"
+                      alt=""
+                      height="50px"
+                      width="50px"
+                    />
+                    <p class="section-weather__prediction-text-style" >12.09.26</p>
+                    <h4 class="section-weather__prediction-text-style">Ясно</h4>
+                    <p class="section-weather__prediction-text-style">32 C</p>
+                    <p class="section-weather__prediction-text-style">15 km/h</p>
+                  </li>
+                  <li class="section-weather__prediction-item">
+                    <img
+                      class="section-weather__prediction-img"
+                      src="../assets/images/weather-2-svgrepo-com.svg"
+                      alt=""
+                      height="50px"
+                      width="50px"
+                    />
+                    <p class="section-weather__prediction-text-style" >12.09.26</p>
+                    <h4 class="section-weather__prediction-text-style">Ясно</h4>
+                    <p class="section-weather__prediction-text-style">32 C</p>
+                    <p class="section-weather__prediction-text-style">15 km/h</p>
+                  </li>
+                  <li class="section-weather__prediction-item">
+                    <img
+                      class="section-weather__prediction-img"
+                      src="../assets/images/weather-2-svgrepo-com.svg"
+                      alt=""
+                      height="50px"
+                      width="50px"
+                    />
+                    <p class="section-weather__prediction-text-style" >12.09.26</p>
+                    <h4 class="section-weather__prediction-text-style">Ясно</h4>
+                    <p class="section-weather__prediction-text-style">32 C</p>
+                    <p class="section-weather__prediction-text-style">15 km/h</p>
+                  </li>
+                  <li class="section-weather__prediction-item">
+                    <img
+                      class="section-weather__prediction-img"
+                      src="../assets/images/weather-2-svgrepo-com.svg"
+                      alt=""
+                      height="50px"
+                      width="50px"
+                    />
+                    <p class="section-weather__prediction-text-style" >12.09.26</p>
+                    <h4 class="section-weather__prediction-text-style">Ясно</h4>
+                    <p class="section-weather__prediction-text-style">32 C</p>
+                    <p class="section-weather__prediction-text-style">15 km/h</p>
+                  </li>
+                  <li class="section-weather__prediction-item">
+                    <img
+                      class="section-weather__prediction-img"
+                      src="../assets/images/weather-2-svgrepo-com.svg"
+                      alt=""
+                      height="50px"
+                      width="50px"
+                    />
+                    <p class="section-weather__prediction-text-style" > Суббота , 12.09.26</p>
+                    <h4 class="section-weather__prediction-text-style">Ясно</h4>
+                    <p class="section-weather__prediction-text-style">32 C</p>
+                    <p class="section-weather__prediction-text-style">15 km/h</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </iv>
+      </section>
+
+      <section class="section-trip-summary" id="trip-summery">
+        <div class="container">
+          <p>— Сводка поездки</p>
+          <h2>Готовься к поездке</h2>
+          <ul>
+            <li>
+              <div>
+                <h3>Маршрут</h3>
+                <ul></ul>
+                <ul>
+                  <li>
+                    Дистанция
+                    <p><span>713 км</span></p>
+                  </li>
+                  <li>
+                    Время
+                    <p><span>≈7:20</span></p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Погода — Сравнение</h3>
+                <div>
+                  <ul>
+                    <li>
+                      <div>
+                        <p>Старт</p>
+                        <p>Москва</p>
+                        <p>Переменная облачность</p>
+                      </div>
+                      <div>
+                        <img alt="иконка соответствующая погоде" />
+                        <p>+12°</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <p>Финиш</p>
+                        <p>Санкт-Петербург</p>
+                        <p>Дождь, ветер 14 м/с</p>
+                      </div>
+                      <div>
+                        <img alt="иконка соответствующая погоде" />
+                        <p>+8°</p>
+                      </div>
+                    </li>
+                  </ul>
+                  <div>
+                    <p>Разница температур<span>−4°</span></p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h3>Smart Dressing</h3>
+                <ul></ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-try">
+        <div class="container section-try__container">
+          <p class="section-try__text">— Попробуй бесплатно</p>
+          <h2 class="section-try__title">
+            Первый маршрут <span>ждёт тебя</span>
+          </h2>
+          <p class="section-try__subtitle">
+            Никаких аккаунтов. Никаких подписок. Просто введи
+            <span>«Откуда» и «Куда» — остальное сделает RouteCast.</span>
+          </p>
+          <a class="section-try__btn" href="#route">Начать прямо сейчас</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="container page-footer__container">
+        <div class="page-header__logo">
+          <img
+            src="~@/assets/images/picture-svgrepo-com.svg"
+            width="35"
+            alt="Логотип RouteCast"
+            class="page-header__logo-img"
+          />
+          <p class="page-header__logo-text">RouteCast</p>
+        </div>
+
+        <div>
+          <p class="page-footer__text">
+            © 2026 RouteCast — Интеллектуальная навигация для водителей
+          </p>
+        </div>
+
+        <div>
+          <ul class="page-footer__list">
+            <li><button class="page-footer__btn">Документация</button></li>
+            <li><button class="page-footer__btn">Api</button></li>
+            <li><button class="page-footer__btn">Контакты</button></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

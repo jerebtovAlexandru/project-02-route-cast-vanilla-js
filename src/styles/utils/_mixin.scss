@@ -1,0 +1,50 @@
+
+// @use "src/styles/abstracts/mixins" as *;
+@mixin text(
+  $font-size,
+  $font-weight: normal,
+  $line-height: null,
+  $color: null,
+  $font-family: null,
+
+  // ОТСТУПЫ, РЕГИСТР И ВЫРАВНИВАНИЕ
+  $letter-spacing: null,
+  $text-transform: null, // uppercase, lowercase, capitalize
+  $text-align: null,     // left, center, right, justify
+  
+  //СЛОЖНЫЙ ДЕКОР И ЭФФЕКТЫ (ДЛЯ СПЕЦИФИЧЕСКИХ ЗАДАЧ)
+  $font-style: null,     // italic, normal
+  $text-decoration: null,// underline, line-through
+  $text-shadow: null,    // x y blur color
+  $white-space: null,    // nowrap, pre-wrap
+  $text-overflow: null   // ellipsis
+) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+  font-family: $font-family;
+  letter-spacing: $letter-spacing;
+  text-transform: $text-transform;
+  text-align: $text-align;
+  font-style: $font-style;
+  text-decoration: $text-decoration;
+  text-shadow: $text-shadow;
+  white-space: $white-space;
+  text-overflow: $text-overflow;
+}
+
+@mixin flex(
+  $direction,     
+  $wrap: null,    
+  $justify: null, 
+  $align: null,   
+  $gap: null      
+) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}

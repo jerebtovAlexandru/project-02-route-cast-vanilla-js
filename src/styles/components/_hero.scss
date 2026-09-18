@@ -1,0 +1,109 @@
+@use "~@/styles/utils/variables" as *;
+@use "~@/styles/utils/animations" as *;
+
+.section-hero{
+    margin-top: 74px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('~@/assets/images/imageHero.png') ;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height:700px;
+
+    border-top: 2px solid $secondary-background-color;
+    border-bottom: 2px solid $secondary-background-color;
+
+    
+
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    &__container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        min-height: 700px;
+        width: 100%;
+    }
+    
+
+    &__title > span{
+            display: block;
+            opacity: 0;
+        animation: fadeinup 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        font-size:100px;
+        font-weight: bold;
+        font-style: italic;
+        line-height: 1;
+        letter-spacing: -0.02em;
+
+        backdrop-filter: blur(5px);
+        padding:20px 40px;
+        border-radius:50px;
+        border-top: 2px solid $accent-background-color;
+        border-bottom: 2px solid $accent-background-color;
+
+        align-items: center;
+
+        
+
+        &-accent--red{
+            color:$accent-background-color;
+        }
+    }
+
+    &__subtitle{
+        width:550px;
+        color:$secondary-text-color;
+        font-size:20px;
+        font-style: italic;
+    }
+
+
+
+ &__button{
+        display: inline-block;
+        padding:10px 20px;
+        border-radius:10px;
+        background-color:$accent-background-color;
+        font-weight: bold;
+        transition: transform 0.3s ease; 
+        &:hover , &:focus{
+        transform:translateY(-5px);
+        cursor: pointer;
+  }
+
+        &--transparent{
+            background: transparent;
+            border:2px solid $secondary-background-color;
+        }
+
+    }
+
+
+    &__list{
+        display: flex;
+        gap:50px;
+        &-item{
+            font-size: 15px;
+            
+        
+        &-text{
+            display:flex;
+            flex-direction: column;
+            
+           }
+        &-accent{
+                color:$accent-text-color;
+                font-size: 30px;
+                font-weight: 900;
+           }
+        }
+    }
+   
+}

@@ -1,0 +1,144 @@
+@use "~@/styles/utils/variables" as *;
+@use "~@/styles/utils/animations" as *;
+.section-route{
+    border-bottom: 2px solid $secondary-background-color;
+
+&__container{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        height:900px;
+        width: 100%;
+}
+&__blocks-cnt{
+    display: flex;
+    flex-direction: row;
+    
+}
+&__cnt-functional{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: space-between;
+        padding:20px 20px;
+
+        width: 500px;
+        height: 500px;
+        border: solid 2px $border-color-semi-transparent;
+}
+&__cnt-inputs{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    gap: 20px; 
+}
+
+&__text{
+    align-self: flex-start;
+    color: $accent-text-color;
+}
+&__title{
+    display: block;
+    font-size: 100px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+&__list-input{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+&__input{
+    background-color: $background-color;
+    border: 2px solid $border-color-semi-transparent;
+    outline: none;
+    width: 100%;
+    padding:10px 10px ;
+    color: $primary-text-color;
+    transition: border-color 0.4s ease;
+
+     &:focus{
+        border:2px solid $accent-background-color ;
+    }
+    
+}
+&__item-title-input{
+  color: $accent-text-color;
+  font-size:15px;
+  font-style: italic;
+  font-weight: bold;
+
+}
+&__btn{
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     background-color: $accent-background-color;
+     padding:10px 20px ;
+     font-size: 20px;
+     color: $primary-text-color;
+     
+&:active{
+          animation: click-bounce 0.2s ease-out;        
+}
+}
+
+&__list-route{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+&__item-route{
+    border: 2px solid $border-color-semi-transparent;
+    width:220px;
+    height:80px;
+    display: flex;
+    align-items: center;
+    padding-left:10px;
+    
+}
+&__text-route{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    color: $secondary-text-color;
+
+    &--big{
+        font-size:25px ;
+        color: $primary-text-color;
+        font-weight: bold;
+    }
+}
+
+&__points-cnt{
+    border:2px solid $border-color-semi-transparent ;
+    width: 100%;
+    padding:15px 10px;
+
+}
+&__text-points{
+    color: $secondary-text-color;
+    margin-bottom: 5px;
+}
+&__btn-points{
+    background: none;
+    color: $secondary-text-color;
+    border: 2px solid $border-color-semi-transparent;
+
+}
+
+&__map{
+    width:500px;
+    height:500px;
+    border: solid 2px $border-color-semi-transparent;
+}
+}
+
+
+
