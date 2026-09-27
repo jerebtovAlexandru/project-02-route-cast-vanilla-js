@@ -1,22 +1,22 @@
 @use "~@/styles/utils/variables" as *;
 @use "~@/styles/utils/animations" as *;
 
-.section-weather{
-    border-bottom: 2px solid $secondary-background-color;
+.section-weather {
+  border-bottom: 2px solid $secondary-background-color;
 
-    &__text{
-        align-self: flex-start;
+  &__text {
+    align-self: flex-start;
     color: $accent-text-color;
-    }
-    &__container{
-        display: flex;
-        flex-direction:column;
-        justify-content: center;
-        gap: 20px;
-        height:900px;
-        width: 100%;
-}
-&__title{
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    height: 900px;
+    width: 100%;
+  }
+  &__title {
     max-width: 700px;
     display: block;
     font-size: 100px;
@@ -24,163 +24,156 @@
     letter-spacing: -0.02em;
     font-style: italic;
     font-weight: bold;
-}
-&__main-div{
+  }
+  &__main-div {
     display: flex;
     flex-direction: row;
     gap: 50px;
-    height: 500px;
-}
-&__div-data-search{
+    min-height: 500px;
+  }
+  &__div-data-search {
     display: flex;
     flex-direction: column;
-    gap:20px;
-    width:100%;
-}
+    gap: 20px;
+    width: 100%;
+  }
 
-&__div-search{
+  &__div-search {
     display: flex;
-        flex-direction:column;
-        justify-content: space-between;
-        padding:20px 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
 
-        width: 100%;
-        height: 100%;
-        border: solid 2px $border-color-semi-transparent;
-
-}
-&__search-title{
-    color:$accent-text-color;
+    width: 100%;
+    height: 100%;
+    border: solid 2px $border-color-semi-transparent;
+  }
+  &__search-title {
+    color: $accent-text-color;
     font: bold;
-    font-size:20px ;
-}
-&__search-input{
+    font-size: 20px;
+  }
+  &__search-input {
     background-color: $background-color;
     border: 2px solid $border-color-semi-transparent;
     outline: none;
     width: 100%;
-    padding:10px 10px ;
+    padding: 10px 10px;
     color: $primary-text-color;
     transition: border-color 0.4s ease;
 
-     &:focus{
-        border:2px solid $accent-background-color ;
+    &:focus {
+      border: 2px solid $accent-background-color;
     }
-}
+  }
 
-&__div-data{
+  &__div-data {
     display: flex;
-        flex-direction:column;
-        justify-content: space-between;
-        padding:20px 20px;
-        gap:5px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
+    gap: 5px;
 
-        width: 100%;
-        height: 100%;
-        border: solid 2px $border-color-semi-transparent;
-}
-&__button{
+    width: 100%;
+    height: 100%;
+    border: solid 2px $border-color-semi-transparent;
+  }
+  &__button {
     display: inline-block;
-        padding:5px 15px;
-        border-radius:10px;
-        background-color:$accent-background-color;
-        font-weight: bold; 
-        color: $primary-text-color;
-        
-        &:active{
-          animation: click-bounce 0.2s ease-out;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: $accent-background-color;
+    font-weight: bold;
+    color: $primary-text-color;
 
-        }
+    &:active {
+      animation: click-bounce 0.2s ease-out;
+    }
 
-        &:hover , &:focus{
-        cursor: pointer;
-        
-}
-}
+    &:hover,
+    &:focus {
+      cursor: pointer;
+    }
+  }
 
-&__data-text{
-    color:$accent-text-color;
+  &__data-text {
+    color: $accent-text-color;
     font: bold;
-    font-size:20px ;
-}
-&__info{
+    font-size: 20px;
+  }
+  &__info {
     display: flex;
     flex-direction: row;
-}
-&__data-reply{
+  }
+  &__data-reply {
     display: flex;
     flex-direction: column;
     font-size: 20px;
-
-}
-&__data-indication{
+  }
+  &__data-indication {
     font-size: 50px;
     font-weight: bold;
-}
-&__data-item-text{
+  }
+  &__data-item-text {
     color: $secondary-text-color;
-}
-&__data-news-list{
+  }
+  &__data-news-list {
     flex-wrap: wrap;
     justify-content: space-around;
     display: flex;
     flex-direction: row;
     gap: 30px;
-}
-&__data-item{
+  }
+  &__data-item {
     display: flex;
     flex-direction: row;
     gap: 20px;
-}
-&__item-img{
-    filter: invert(13%) sepia(100%) saturate(7483%) hue-rotate(4deg) brightness(107%) contrast(117%);
-}
+  }
+  &__item-img {
+    filter: invert(13%) sepia(100%) saturate(7483%) hue-rotate(4deg)
+      brightness(107%) contrast(117%);
+  }
 
-
-
-
-&__div-prediction{
+  &__div-prediction {
     display: flex;
     gap: 20px;
-        flex-direction:column;
-        padding:20px 20px;
+    flex-direction: column;
+    padding: 20px 20px;
 
-        width:100%;
-        height: 100%;
-        border: solid 2px $border-color-semi-transparent;
-}
+    width: 100%;
+    height: 100%;
+    border: solid 2px $border-color-semi-transparent;
+  }
 
-&__prediction-title{
+  &__prediction-title {
     color: $accent-text-color;
-
-  
-}
-&__prediction-text-style{
- font-size: 13px;   
- background-color: $card;
- border-radius: 3px;
- width: 100px;
-}
-&__prediction-item{
+  }
+  &__prediction-text-style {
+    font-size: 13px;
+    background-color: $card;
+    border-radius: 3px;
+    width: 100%;
+  }
+  &__prediction-item {
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding: 5px 5px;
 
     text-align: center;
     gap: 2px;
 
-        border-radius: 5px;
+    border-radius: 5px;
     background-color: $accent-background-color;
-    height: 180px;
-    width: 140px;
+    min-height: 180px;
+    width: 150px;
     border: solid 1px $primary-text-color;
-}
-&__prediction-list{
-  display: flex;
- flex-direction: row;
- justify-content: center;
-  flex-wrap: wrap;
-  gap: 35px;
-
-}
+  }
+  &__prediction-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 }
