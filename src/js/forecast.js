@@ -24,19 +24,22 @@ export async function fetchForecast(fetchCoordinatesCallback, city) {
 }
 
 export function getOptions(data) {
+  if(data ===null ||data === undefined){
+    return
+  }
   const forecastDay = data.forecast.forecastday;
   const result = [];
   for (let i = 0; i < forecastDay.length; i++) {
     const day = forecastDay[i];
     result.push({
-      dateName: day.date, // "2026-09-28"
-      tempMax: day.day.maxtemp_c, // 25.4
-      tempMin: day.day.mintemp_c, // 15.8
-      tempAvg: day.day.avgtemp_c, // 19.9
-      windMaxKmh: day.day.maxwind_kph, // 15.5
-      humidity: day.day.avghumidity, // 49
-      status: day.day.condition.text, // "Пасмурно"
-      icon: `https:${day.day.condition.icon}`, // "//cdn.weatherapi.com/..."
+      dateName: day.date,
+      tempMax: day.day.maxtemp_c,
+      tempMin: day.day.mintemp_c,
+      tempAvg: day.day.avgtemp_c,
+      windMaxKmh: day.day.maxwind_kph,
+      humidity: day.day.avghumidit,
+      status: day.day.condition.text,
+      icon: `https:${day.day.condition.icon}`,
     });
   }
   return result;
@@ -53,7 +56,14 @@ export function getOptions(data) {
 //      icon: forecastDay.day.condition.icon, // "//cdn.weatherapi.com/..."
 //    };
 
-export function renderCard(data, parent) {
+export function renderCard(data, parent ,city) {
+  parent.innerHTML = ""; 
+  if(city =""){
+      parent.innerHTML = ""; 
+  }
+
+  if (!data || data.length === 0) return;
+  
   let markup =data.map((day) => {
     const {
       dateName,
@@ -83,6 +93,7 @@ export function renderCard(data, parent) {
     
      parent.innerHTML += markup;
 
+
   //  `<li class="section-weather__prediction-item">
   //                    <img
   //                    class="section-weather__prediction-img"
@@ -100,4 +111,3 @@ export function renderCard(data, parent) {
   // parent.innerHTML += markup;
 }
 
-// функция для отображения иконки с запросом на сервер и отображением её

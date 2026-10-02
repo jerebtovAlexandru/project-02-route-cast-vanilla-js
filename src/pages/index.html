@@ -249,7 +249,7 @@
       </section>
 
       <section class="section-weather" id="weather">
-        <iv class="container section-weather__container">
+        <div class="container section-weather__container">
           <p class="section-weather__text">— Экспресс-Погода</p>
           <h2 class="section-weather__title">Знай погоду до выезда</h2>
           <div class="section-weather__main-div">
@@ -314,68 +314,68 @@
               </div>
             </div>
           </div>
-        </iv>
+        </div>
       </section>
 
       <section class="section-trip-summary" id="trip-summery">
-        <div class="container">
-          <p>— Сводка поездки</p>
-          <h2>Готовься к поездке</h2>
-          <ul>
-            <li>
-              <div>
-                <h3>Маршрут</h3>
-                <ul></ul>
-                <ul>
-                  <li>
+        <div class="container section-trip-summary__container">
+          <p class="section-trip-summary__text ">— Сводка поездки</p>
+          <h2 class="section-trip-summary__title">Готовься к поездке</h2>
+          <ul class="section-trip-summary__list">
+            <li class=" section-trip-summary__list-item">
+              <div class=" section-trip-summary__div section-trip-summary__div-route">
+                <h3 class=" section-trip-summary__div-title">Маршрут</h3>
+                <ul class="section-trip-summary__route-list"></ul>
+                <ul class="section-trip-summary__list-distance-duration">
+                  <li class="section-trip-summary__distance-duration-item">
                     Дистанция
-                    <p><span>713 км</span></p>
+                    <p class="section-trip-summary__distance-duration-text"><span class="section-trip-summary__distance-duration-span">713 км</span></p>
                   </li>
-                  <li>
+                  <li class="section-trip-summary__distance-duration-item">
                     Время
-                    <p><span>≈7:20</span></p>
+                    <p class="section-trip-summary__distance-duration-text"><span class="section-trip-summary__distance-duration-span">≈7:20</span></p>
                   </li>
                 </ul>
               </div>
             </li>
-            <li>
-              <div>
-                <h3>Погода — Сравнение</h3>
+            <li class=" section-trip-summary__list-item">
+              <div  class=" section-trip-summary__div section-trip-summary__div-weather">
+                <h3  class=" section-trip-summary__div-title">Погода — Сравнение</h3>
                 <div>
                   <ul>
                     <li>
-                      <div>
-                        <p>Старт</p>
-                        <p>Москва</p>
-                        <p>Переменная облачность</p>
+                      <div class="section-trip-summary__div-route-point">
+                        <p class="section-trip-summary__route-point-text">Старт</p>
+                        <p class="section-trip-summary__route-point-text">Москва</p>
+                        <p class="section-trip-summary__route-point-text">Переменная облачность</p>
                       </div>
-                      <div>
-                        <img alt="иконка соответствующая погоде" />
-                        <p>+12°</p>
+                      <div class="section-trip-summary__route-point-image">
+                        <img class="section-trip-summary__route-point-image" alt="иконка соответствующая погоде" />
+                        <p class="section-trip-summary__route-point-temp">+12°</p>
                       </div>
                     </li>
-                    <li>
-                      <div>
-                        <p>Финиш</p>
-                        <p>Санкт-Петербург</p>
-                        <p>Дождь, ветер 14 м/с</p>
+                    <li class=" section-trip-summary__list-item">
+                      <div class="section-trip-summary__div-route-point">
+                        <p class="section-trip-summary__route-point-text">Финиш</p>
+                        <p class="section-trip-summary__route-point-text">Санкт-Петербург</p>
+                        <p class="section-trip-summary__route-point-text">Дождь, ветер 14 м/с</p>
                       </div>
-                      <div>
-                        <img alt="иконка соответствующая погоде" />
-                        <p>+8°</p>
+                      <div class="section-trip-summary__route-point-image">
+                        <img alt="иконка соответствующая погоде" class="section-trip-summary__image"/>
+                        <p class="section-trip-summary__route-point-temp">+8°</p>
                       </div>
                     </li>
                   </ul>
-                  <div>
-                    <p>Разница температур<span>−4°</span></p>
+                  <div class="section-trip-summary__difference-div">
+                    <p class="section-trip-summary__difference-text">Разница температур<span class="section-trip-summary__difference-span">−4°</span></p>
                   </div>
                 </div>
               </div>
             </li>
-            <li>
-              <div>
-                <h3>Smart Dressing</h3>
-                <ul></ul>
+            <li class=" section-trip-summary__list-item">
+              <div  class=" section-trip-summary__div section-trip-summary__div-dressing">
+                <h3 class=" section-trip-summary__div-title">Smart Dressing</h3>
+                <ul section-trip-summary__dressing-list></ul>
               </div>
             </li>
           </ul>

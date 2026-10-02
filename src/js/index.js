@@ -56,6 +56,15 @@ beginRouteRef.addEventListener("input", () => {
 weatherSearchButtonRef.addEventListener("click", async () => {
   const city = searchInput.value.trim();
   const weatherData = await fetchWeather(fetchCoordinates, city);
+  if(weatherData ===null || weatherData === undefined){
+    forecastWeatherDaysContainerRef.innerHTML = "";
+    sensationsTempRef.textContent = "0";
+    sensationsWindRef.textContent = "0";
+    sensationsHumidityRef.textContent = "0";
+    weatherTempRef.textContent = "0";
+     return
+  }
+
   const {
     main: { temp, feels_like: feelsLike, humidity },
     wind: { speed: windSpeed },
@@ -69,5 +78,5 @@ weatherSearchButtonRef.addEventListener("click", async () => {
 
   const data = await fetchForecast(fetchCoordinates, city);
   const response = await getOptions(data)
-  await renderCard(response, forecastWeatherDaysContainerRef);
+  await renderCard(response, forecastWeatherDaysContainerRef, city);
 });
