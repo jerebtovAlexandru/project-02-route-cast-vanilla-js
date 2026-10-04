@@ -1,3 +1,175 @@
 @use "~@/styles/utils/variables" as *;
 @use "~@/styles/utils/animations" as *;
 
+.section-trip-summary {
+  border-bottom: 2px solid $secondary-background-color;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 60px 0;
+  }
+
+  &__text {
+    color: $accent-text-color;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+  }
+
+  &__title {
+    display: block;
+    font-size: 100px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-style: italic;
+    font-weight: bold;
+    color: $primary-text-color;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    border: 2px solid $border-color-semi-transparent;
+  }
+
+  &__list-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      border-right: 2px solid $border-color-semi-transparent;
+    }
+  }
+
+  &__div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 20px;
+  }
+
+  &__div-title {
+    color: $accent-text-color;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  // ===== Маршрут =====
+  &__route-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__list-distance-duration {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: auto;
+  }
+
+  &__distance-duration-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 15px 10px;
+    border: 2px solid $border-color-semi-transparent;
+    color: $secondary-text-color;
+    font-size: 15px;
+  }
+
+  &__distance-duration-text {
+    display: block;
+  }
+
+  &__distance-duration-span {
+    font-size: 25px;
+    color: $primary-text-color;
+    font-weight: bold;
+  }
+
+  // ===== Погода =====
+  &__div-weather {
+    justify-content: space-between;
+  }
+
+  &__div-route-point {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__route-point-text {
+    color: $secondary-text-color;
+    font-size: 15px;
+
+    &:first-child {
+      color: $accent-text-color;
+    }
+
+    &:nth-child(2) {
+      color: $primary-text-color;
+      font-weight: bold;
+    }
+  }
+
+  &__route-point-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__image {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__route-point-temp {
+    font-size: 25px;
+    color: $primary-text-color;
+    font-weight: bold;
+  }
+
+  &__difference-div {
+    margin-top: 20px;
+    padding: 15px 10px;
+    border: 2px solid $border-color-semi-transparent;
+  }
+
+  &__difference-text {
+    display: flex;
+    flex-direction: column;
+    color: $secondary-text-color;
+    font-size: 15px;
+  }
+
+  &__difference-span {
+    font-size: 25px;
+    color: $accent-background-color;
+    font-weight: bold;
+  }
+
+  // ===== Smart Dressing =====
+  &__div-dressing {
+    gap: 20px;
+  }
+
+  &__dressing-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

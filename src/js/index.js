@@ -3,14 +3,15 @@ import { renderRouteLogic, routeState, resetRoute } from "./route.js";
 import "./map.js";
 import { fetchWeather } from "./weather.js";
 import { fetchForecast, renderCard, getOptions } from "./forecast.js";
-const beginRouteRef = document.getElementById("begin");
-const endRouteRef = document.getElementById("end");
+const beginRouteRef = document.getElementById("begin");//!!!!!!!!!!!!!!!!!!!!!
+const endRouteRef = document.getElementById("end");//!!!!!!!!!!!!!!!!!!!!!
+const distanceRouteRefs = document.querySelectorAll("#distanceRoute");
+const distanceTimeRouteRefs = document.querySelectorAll("#distanсeTimeRoute");
+const tripSummaryRouteListRef = document.getElementById("tripSummaryRouteList");
 const startMapButtonRef = document.getElementById("startBtn");
-const distanceRouteRef = document.getElementById("distanceRoute");
-const distanceTimeRouteRef = document.getElementById("distanсeTimeRoute");
 
 const weatherSearchButtonRef = document.getElementById("weatherSearchButton");
-const weatherResetButtonRef = document.getElementById("weatherResetButton"); //!!!!!!!
+const weatherResetButtonRef = document.getElementById("weatherResetButton"); //!!!!!!!!!!!!!!!!!!!!!
 const searchInputRef = document.getElementById("searchInput");
 const weatherImageRef = document.getElementById("weatherImage");
 const weatherTempRef = document.getElementById("weatherTemp");
@@ -22,13 +23,15 @@ const forecastWeatherDaysContainerRef = document.getElementById(
 );
 
 function resetRouteUi() {
-  distanceRouteRef.textContent = "0 Km";
-  distanceTimeRouteRef.textContent = "0 h";
+
+  distanceRouteRefs.forEach(el => { el.textContent = "0 Km" });
+  distanceTimeRouteRefs.forEach(el => {el.textContent = "0 h"});
 }
 
 function updateRouteUI(distanceKm, hours, minutes) {
-  distanceRouteRef.textContent = `${distanceKm} Km`;
-  distanceTimeRouteRef.textContent = `${hours} h ${minutes} min`;
+  distanceRouteRefs.forEach(el => { el.textContent = `${distanceKm} Km` });
+  distanceTimeRouteRefs.forEach(el => {el.textContent = `${hours} h ${minutes} min`});
+  
 }
 
 startMapButtonRef.addEventListener("click", async (evt) => {
