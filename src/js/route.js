@@ -1,4 +1,4 @@
- import L from 'leaflet';
+import L from 'leaflet';
 import 'leaflet-routing-machine';
 import { map } from './map.js';
  

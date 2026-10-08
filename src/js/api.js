@@ -14,14 +14,17 @@
         if(!response.ok) throw new Error(`Данное название не существует! Ошибка:${response.status}`);
 
         const data = await response.json();
+        
 
         if(data && data.length > 0){
             const firstResult = data[0];
 
             const lat = parseFloat(firstResult.lat);
             const lon =parseFloat(firstResult.lon);
+            const fullName =( data[0].display_name).split(',');
+            const cleanFullName =fullName[0].trim();
 
-            return [lat , lon]
+            return [[lat , lon],cleanFullName]
         }else{
             console.warn('База данных такой адресс не смогла найти !')
             return null;

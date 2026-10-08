@@ -70,6 +70,37 @@
     flex-direction: column;
     gap: 20px;
     margin-bottom: 40px;
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &-city{
+    border: 2px solid $primary-text-color;
+    background-color: $accent-background-color; 
+    padding: 4px 8px;                
+    display: inline-block;  
+    border-radius: 4px;
+  }
+  &-line{
+    flex-grow: 1;
+     height: 1px; 
+     border-bottom: 2px dotted $border-color; 
+
+     margin-right: 8px;
+     align-self: flex-end;
+     margin-bottom: 4px;
+  }
+  &-meta{
+    color: $accent-text-color;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    
+  }
+
+
   }
 
   &__list-distance-duration {
@@ -99,6 +130,11 @@
     color: $primary-text-color;
     font-weight: bold;
   }
+
+
+
+  // __________________________________________
+
 
   // ===== Погода =====
   &__div-weather {

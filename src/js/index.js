@@ -3,6 +3,7 @@ import { renderRouteLogic, routeState, resetRoute } from "./route.js";
 import "./map.js";
 import { fetchWeather } from "./weather.js";
 import { fetchForecast, renderCard, getOptions } from "./forecast.js";
+import {summaryRoute} from './tripSummary.js';
 const beginRouteRef = document.getElementById("begin");//!!!!!!!!!!!!!!!!!!!!!
 const endRouteRef = document.getElementById("end");//!!!!!!!!!!!!!!!!!!!!!
 const distanceRouteRefs = document.querySelectorAll("#distanceRoute");
@@ -38,13 +39,18 @@ startMapButtonRef.addEventListener("click", async (evt) => {
   const beginText = beginRouteRef.value.trim();
   const endText = endRouteRef.value.trim();
 
-  const fetchedCoordsBegin = await fetchCoordinates(beginText);
-  const fetchedCoordsEnd = await fetchCoordinates(endText);
+  const [coordsBegin , sityNameBegin] = await fetchCoordinates(beginText);
+   const [coordsEnd , sityNameEnd] =  await fetchCoordinates(endText);
+
+
+  const fetchedCoordsBegin =coordsBegin;
+  const fetchedCoordsEnd =coordsEnd;
 
   if (fetchedCoordsEnd && fetchedCoordsBegin) {
     routeState.startCoords = fetchedCoordsBegin;
     routeState.endCoords = fetchedCoordsEnd;
     renderRouteLogic(updateRouteUI, resetRouteUi);
+    summaryRoute(tripSummaryRouteListRef ,sityNameBegin,sityNameEnd);
   }
 });
 
